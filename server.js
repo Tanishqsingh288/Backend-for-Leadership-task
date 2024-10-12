@@ -19,5 +19,5 @@ app.get('/', (req, res) => {
 // Use the userRoutes for any routes starting with /api
 app.use('/api', userRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Export the app for Vercel
+module.exports = app;
